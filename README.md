@@ -8,3 +8,9 @@ This is Season 1 (S1) — the foundational prototype that establishes the core v
 - 🤖 AI Responses — Falls back to a local llama3.2 model via Ollama for general queries.
 - 🚀 NASA APOD Integration — Fetches a random Astronomy Picture of the Day with an explanation when space-related keywords are detected.
 - 🧠 Hardcoded Identity — Responds to "What is your name?" / "Who are you?" with a fixed identity response.
+# Limitations (S1)
+
+- No conversation history is passed to the LLM — each query is stateless
+- device_index=1 for the microphone is hardcoded; may need adjustment per system
+- Uses sympy's true/false for booleans — will be replaced with native Python bool in S2
+- NASA APOD explanations can be very long for TTS
